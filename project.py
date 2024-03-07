@@ -22,7 +22,7 @@ def display_live_image(image_url):
     st.image(image, caption='Live Image', use_column_width=True)
 
 # Example URL for demonstration
-image_url = "https://example.com/image.jpg"
+image_url = "https://drive.google.com/file/d/1WdLDDKHMJIMWm04SKZMl2ltqAaC381et/view?usp=drivesdk"
 
 # Display the live image
 display_live_image(image_url)
