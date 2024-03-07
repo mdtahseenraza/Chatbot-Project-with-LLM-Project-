@@ -36,7 +36,7 @@ st.markdown(
 
 # Styling the text color to be bold and purple
 st.markdown(
-    "<h1 style='text-align: center; color: purple; font-family: Arial; font-weight: bold;'>An Large language model project by Tahseen Raza</h1>",
+    "<h1 style='text-align: center; color: purple; font-family: Arial; font-weight: bold;'>An Large language model Bot-project by </h1>",
     unsafe_allow_html=True
 )
 
