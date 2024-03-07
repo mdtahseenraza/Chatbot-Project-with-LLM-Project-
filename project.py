@@ -15,12 +15,19 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="BOT by Tahseen")
 
-# Inserting background image with gradient purple and white shading
+# Adding landing page animation with a web-based stock image in the background
 st.markdown(
     """
     <style>
+    @keyframes slide {
+        0% { transform: translateY(-100vh); }
+        100% { transform: translateY(0); }
+    }
+
     body {
-        background-image: linear-gradient(to bottom right, purple, white);
+        background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fen%2Fdesktop-wallpaper-ezmlt&psig=AOvVaw1l6-nJPkOPKV4rKbwb50VK&ust=1709904539872000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMCly_mg4oQDFQAAAAAdAAAAABAJ');
+        background-size: cover;
+        animation: slide 1s ease-in-out;
     }
     </style>
     """,
