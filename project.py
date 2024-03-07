@@ -5,15 +5,15 @@ import google.generativeai as genai
 import time
 
 load_dotenv()
-
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+# Replace "YOUR_API_KEY" with your actual API key
+genai.configure(api_key="AIzaSyBaoG6Rmp8nGaW0OvRUyM6LmvVWFUxH9UY")
 
 model = genai.GenerativeModel("gemini-pro") 
 chat = model.start_chat(history=[])
 
 def get_gemini_response(question):
-    response = chat.send_message(question, stream=True)
-    return response
+    response = chat.send_message(question)
+    return response.text
 
 st.set_page_config(page_title="BOT by Tahseen")
 
@@ -37,9 +37,8 @@ if submit_button and input_text:
     response = get_gemini_response(input_text)
     st.session_state['chat_history'].append(("You", input_text))
     st.subheader(">>>")
-    for chunk in response:
-        st.write(chunk.text)
-        st.session_state['chat_history'].append(("Bot", chunk.text))
+    st.write(response)
+    st.session_state['chat_history'].append(("Bot", response))
 
 github_button = '<a href="https://github.com/mdtahseenraza?tab=repositories"><button style="background-color: green; color: white; padding: 10px 15px; border-radius: 5px; border: none; margin-top: 20px; margin-left: 10px;">GitHub</button></a>'
 st.markdown(github_button, unsafe_allow_html=True)
