@@ -1,9 +1,10 @@
 import streamlit as st
-import os
+import requests
 import google.generativeai as genai
-import time
+from PIL import Image
+
 # Replace "YOUR_API_KEY" with your actual API key
-genai.configure(api_key="AIzaSyBaoG6Rmp8nGaW0OvRUyM6LmvVWFUxH9UY")
+genai.configure(api_key="AIzaSyBaoG6Rmp8nGaWOOVRUyM6LmvVwFUXH9UY")
 
 model = genai.GenerativeModel("gemini-pro") 
 chat = model.start_chat(history=[])
@@ -14,9 +15,17 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="BOT by Tahseen")
 
-from PIL import Image
-image = Image.open(r"C:\Users\Raj\Desktop\End-To-End-Gemini-Project-main\Capture.PNG")
-st.image(image, use_column_width=True)
+# Function to fetch and display the image from the web
+def display_live_image(image_url):
+    response = requests.get(image_url)
+    image = response.content
+    st.image(image, caption='Live Image', use_column_width=True)
+
+# Example URL for demonstration
+image_url = "https://example.com/image.jpg"
+
+# Display the live image
+display_live_image(image_url)
 
 st.markdown("<h1 style='text-align: center; color: #004aad; font-family: Arial;'>An LLM based project!</h1>", unsafe_allow_html=True)
 
