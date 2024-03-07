@@ -15,19 +15,7 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="BOT by Tahseen")
 
-# Function to fetch and display the image from the web
-def display_live_image(image_url):
-    response = requests.get(image_url)
-    image = response.content
-    st.image(image, caption='Live Image', use_column_width=True)
-
-# Example URL for demonstration
-image_url = "https://drive.google.com/file/d/1WdLDDKHMJIMWm04SKZMl2ltqAaC381et/view?usp=drivesdk"
-
-# Display the live image
-display_live_image(image_url)
-
-st.markdown("<h1 style='text-align: center; color: #004aad; font-family: Arial;'>An LLM based project!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: #004aad; font-family: Arial;'>An LLM based project! by Tahseen</h1>", unsafe_allow_html=True)
 
 if 'chat_history' not in st.session_state:
     st.session_state['chat_history'] = []
