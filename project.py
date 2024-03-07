@@ -3,8 +3,6 @@ import streamlit as st
 import os
 import google.generativeai as genai
 import time
-
-load_dotenv()
 # Replace "YOUR_API_KEY" with your actual API key
 genai.configure(api_key="AIzaSyBaoG6Rmp8nGaW0OvRUyM6LmvVWFUxH9UY")
 
