@@ -15,7 +15,23 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="BOT by Tahseen")
 
-st.markdown("<h1 style='text-align: center; color: #004aad; font-family: Arial;'>An LLM based project! by Tahseen</h1>", unsafe_allow_html=True)
+# Inserting background image with gradient purple and white shading
+st.markdown(
+    """
+    <style>
+    body {
+        background-image: linear-gradient(to bottom right, purple, white);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Styling the text color to be bold and purple
+st.markdown(
+    "<h1 style='text-align: center; color: purple; font-family: Arial; font-weight: bold;'>An Large language model project by Tahseen Raza</h1>",
+    unsafe_allow_html=True
+)
 
 if 'chat_history' not in st.session_state:
     st.session_state['chat_history'] = []
@@ -39,3 +55,4 @@ st.markdown(github_button, unsafe_allow_html=True)
 
 linkedin_button = '<a href="https://www.linkedin.com/in/md-tahseen-raza-47726625b/"><button style="background-color: #0077B5; color: white; padding: 10px 15px; border-radius: 5px; border: none; margin-top: 20px; margin-left: 10px;">LinkedIn</button></a>'
 st.markdown(linkedin_button, unsafe_allow_html=True)
+    
