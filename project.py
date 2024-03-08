@@ -8,7 +8,6 @@ genai.configure(api_key="AIzaSyBbk9sTnlsOR_qC2PNPzftt_QKvskLJYnI")
 # Call set_page_config() at the beginning
 st.set_page_config(page_title="BOT by Tahseen")
 
-df = px.data.iris()
 
 @st.cache_data
 def get_img_as_base64(file):
