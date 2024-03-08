@@ -4,7 +4,7 @@ import google.generativeai as genai
 from PIL import Image
 
 # Replace "YOUR_API_KEY" with your actual API key
-genai.configure(api_key="AIzaSyBIO2eJcGH7cfq1Wunw3aG-nndFX9sTm2Q")
+genai.configure(api_key="AIzaSyBbk9sTnlsOR_qC2PNPzftt_QKvskLJYnI")
 
 model = genai.GenerativeModel("gemini-pro") 
 chat = model.start_chat(history=[])
