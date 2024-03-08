@@ -22,7 +22,7 @@ page_bg_img = f"""
 <style>
 /* Set background image for the main content area */
 [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("https://images.unsplash.com/photo-1644552223652-879fd6148ae8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1618367588411-d9a90fefa881?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: 125%;
     background-attachment: local;
 }}
