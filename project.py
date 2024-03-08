@@ -8,7 +8,7 @@ genai.configure(api_key="AIzaSyBbk9sTnlsOR_qC2PNPzftt_QKvskLJYnI")
 # Call set_page_config() at the beginning
 st.set_page_config(page_title="BOT by Tahseen")
 
-
+# Function to read image file and convert to base64
 @st.cache_data
 def get_img_as_base64(file):
     with open(file, "rb") as f:
@@ -17,8 +17,10 @@ def get_img_as_base64(file):
 
 img = get_img_as_base64("image.jpg")
 
+# Background image and styling
 page_bg_img = f"""
 <style>
+/* Set background image for the main content area */
 [data-testid="stAppViewContainer"] > .main {{
     background-image: url("https://images.unsplash.com/photo-1638026921271-9227681deebc?q=80&w=2480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: 180%;
@@ -27,6 +29,7 @@ page_bg_img = f"""
     background-attachment: local;
 }}
 
+/* Set background image for the sidebar */
 [data-testid="stSidebar"] > div:first-child {{
     background-image: url("data:image/png;base64,{img}");
     background-position: center; 
@@ -34,23 +37,23 @@ page_bg_img = f"""
     background-attachment: fixed;
 }}
 
-[data-testid="stHeader"] {{
-    background: rgba(0,0,0,0);
-}}
-
-[data-testid="stToolbar"] {{
-    right: 2rem;
-}}
-
-/* Apply white color to text in the sidebar */
-.sidebar-content .markdown-text {{
+/* Set background color and text color for the header, toolbar, and sidebar */
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+.sidebar-content {{
+    background-color: rgba(0, 0, 0, 0);
     color: white;
 }}
 </style>
 """
 
+# Apply background image and styling
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# App content
 st.title("An LLM based chatbot by Tahseen😉")
+
+# Sidebar content
 st.sidebar.header("About me")
 st.sidebar.markdown(
     """
@@ -59,23 +62,27 @@ st.sidebar.markdown(
     """
 )
 
+# Initialize the generative model
 model = genai.GenerativeModel("gemini-pro") 
 chat = model.start_chat(history=[])
 
+# Function to get response from the generative model
 def get_gemini_response(question):
     response = chat.send_message(question)
     return response.text
 
+# Get user input
 if 'chat_history' not in st.session_state:
     st.session_state['chat_history'] = []
 
 input_text = st.text_input("  Ask Anything?🤔", key="input")
 
+# Button to submit the input
 button_container = st.container()
-
 with button_container:
     submit_button = st.button("Get Answer✅")
 
+# Process input and get response
 if submit_button and input_text:
     response = get_gemini_response(input_text)
     st.session_state['chat_history'].append(("You", input_text))
