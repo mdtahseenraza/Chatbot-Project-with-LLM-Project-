@@ -6,7 +6,7 @@ import google.generativeai as genai
 genai.configure(api_key="AIzaSyBbk9sTnlsOR_qC2PNPzftt_QKvskLJYnI")
 
 # Call set_page_config() at the beginning
-st.set_page_config(page_title="BOT by Tahseen")
+st.set_page_config(page_title="BOT by Tahseen!")
 
 # Function to read image file and convert to base64
 @st.cache_data
@@ -23,15 +23,13 @@ page_bg_img = f"""
 /* Set background image for the main content area */
 [data-testid="stAppViewContainer"] > .main {{
     background-image: url("https://images.unsplash.com/photo-1644552223652-879fd6148ae8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: 125%;
     background-attachment: local;
 }}
 
 /* Set background image for the sidebar */
 [data-testid="stSidebar"] > div:first-child {{
     background-image: url("data:image/png;base64,{img}");
-    background-position: center; 
     background-repeat: no-repeat;
     background-attachment: fixed;
 }}
@@ -50,10 +48,10 @@ page_bg_img = f"""
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # App content
-st.title("An LLM based bot by Tahseen😉")
+st.title("An LLM based bot by Tahseen....😉")
 
 # Sidebar content
-st.sidebar.header("About me")
+st.sidebar.header("About me!")
 st.sidebar.markdown(
     """
     I'm Tahseen Raza, a data scientist and a language chain developer. 
