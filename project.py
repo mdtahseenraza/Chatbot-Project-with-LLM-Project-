@@ -1,6 +1,5 @@
 import base64
 import streamlit as st
-import plotly.express as px
 import google.generativeai as genai
 
 # Replace "YOUR_API_KEY" with your actual API key
