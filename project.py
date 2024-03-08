@@ -30,7 +30,6 @@ page_bg_img = f"""
 /* Set background image for the sidebar */
 [data-testid="stSidebar"] > div:first-child {{
     background-image: url("data:image/png;base64,{img}");
-    background-repeat: no-repeat;
     background-attachment: fixed;
 }}
 
