@@ -41,11 +41,16 @@ page_bg_img = f"""
 [data-testid="stToolbar"] {{
     right: 2rem;
 }}
+
+/* Apply white color to text in the sidebar */
+.sidebar-content .markdown-text {{
+    color: white;
+}}
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("An LLM based chatbot by Tahseen")
+st.title("An LLM based chatbot by Tahseen😉")
 st.sidebar.header("About me")
 st.sidebar.markdown(
     """
