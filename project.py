@@ -23,7 +23,7 @@ page_bg_img = f"""
 /* Set background image for the main content area */
 [data-testid="stAppViewContainer"] > .main {{
     background-image: url("https://images.unsplash.com/photo-1589859762194-eaae75c61f64?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: 250%;
+    background-size: 100%;
     background-attachment: local;
 }}
 
