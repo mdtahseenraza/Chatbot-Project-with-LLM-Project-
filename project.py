@@ -15,16 +15,15 @@ def get_img_as_base64(file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img = get_img_as_base64("image.jpg")
+img = get_img_as_base64("image.jpeg")
 
 # Background image and styling
 page_bg_img = f"""
 <style>
 /* Set background image for the main content area */
 [data-testid="stAppViewContainer"] > .main {{
-    background-image: url("https://images.unsplash.com/photo-1638026921271-9227681deebc?q=80&w=2480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: 180%;
-    background-position: top left;
+    background-image: url("https://images.unsplash.com/photo-1644552223652-879fd6148ae8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: local;
 }}
@@ -51,7 +50,7 @@ page_bg_img = f"""
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # App content
-st.title("An LLM based chatbot by Tahseen😉")
+st.title("An LLM based bot by Tahseen😉")
 
 # Sidebar content
 st.sidebar.header("About me")
