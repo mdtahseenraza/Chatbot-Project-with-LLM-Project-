@@ -2,7 +2,6 @@ import base64
 import streamlit as st
 import google.generativeai as genai
 
-# Replace "YOUR_API_KEY" with your actual API key
 genai.configure(api_key="AIzaSyBbk9sTnlsOR_qC2PNPzftt_QKvskLJYnI")
 
 # Call set_page_config() at the beginning
